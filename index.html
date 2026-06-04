@@ -57,24 +57,28 @@
         .text-center { text-align: center; }
         
         /* Botões */
-        .btn { display: inline-block; padding: 18px 35px; font-size: 1.2rem; font-weight: bold; text-transform: uppercase; text-decoration: none; border-radius: 8px; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.2); cursor: pointer; border: none; }
+        .btn { display: inline-block; padding: 18px 35px; font-size: 1.2rem; font-weight: bold; text-transform: uppercase; text-decoration: none; border-radius: 8px; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.2); cursor: pointer; border: none; text-align: center; }
         .btn-primary { background-color: var(--accent); color: var(--primary-dark); }
         .btn-primary:hover { background-color: var(--accent-hover); transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.3); }
         .btn-outline { background-color: transparent; border: 2px solid var(--accent); color: var(--accent); }
         .btn-outline:hover { background-color: var(--accent); color: var(--primary-dark); }
         
         /* Cabeçalho / Hero */
-        header { background-color: var(--primary); color: var(--text-light); padding: 4rem 0 5rem; text-align: center; border-bottom: 8px solid var(--accent); }
+        header { background-color: var(--primary); color: var(--text-light); padding: 4rem 0 2rem; text-align: center; }
         header h1 { font-size: 3rem; font-weight: 900; color: var(--accent); text-transform: uppercase; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); letter-spacing: -1px; }
-        header p.subtitle { font-size: 1.2rem; max-width: 800px; margin: 0 auto 2.5rem; font-weight: 500; }
+        header p.subtitle { font-size: 1.2rem; max-width: 800px; margin: 0 auto 1.5rem; font-weight: 500; }
         
-        /* Mockup de Imagem Simulado */
-        .hero-image { max-width: 900px; margin: -3rem auto 3rem; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); border: 4px solid #fff; display: block; width: 100%; background: #fff; }
+        /* Vídeo VSL Container */
+        .video-section { background-color: var(--primary); padding: 1rem 0 5rem; text-align: center; border-bottom: 8px solid var(--accent); }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 900px; margin: 0 auto; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); border: 4px solid #fff; background: #000; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+        .video-caption { color: var(--text-light); margin-top: 1.5rem; font-size: 1.1rem; font-weight: 500; opacity: 0.9; }
         
         /* Seção Test-Drive */
         .test-drive { background-color: var(--primary-dark); color: white; padding: 4rem 0; text-align: center; }
         .test-drive h2 { color: var(--accent); font-size: 2.2rem; margin-bottom: 1rem; }
         .test-drive p { font-size: 1.1rem; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+        
         .pulse { animation: pulse 2s infinite; }
         @keyframes pulse {
             0% { transform: scale(1); }
@@ -103,7 +107,7 @@
         .carousel-slide img { width: 100%; height: auto; object-fit: cover; display: block; }
         
         .carousel-controls { display: flex; justify-content: center; gap: 15px; margin-top: 20px; }
-        .btn-nav { background: var(--primary); color: var(--accent); border: none; width: 50px; height: 50px; border-radius: 50%; font-size: 1.5rem; cursor: pointer; transition: background 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
+        .btn-nav { background: var(--primary); color: var(--accent); border: none; width: 50px; height: 50px; border-radius: 50%; font-size: 1.5rem; cursor: pointer; transition: background 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.2); display: flex; justify-content: center; align-items: center; }
         .btn-nav:hover { background: var(--primary-dark); }
 
         /* Preço / Oferta */
@@ -133,9 +137,26 @@
         <div class="container">
             <h1>Milhar Milionária do Guinho</h1>
             <p class="subtitle">A matemática a seu favor: Digite a milhar do primeiro horário, e nosso algoritmo revela as 16 milhares e os 4 grupos com o maior potencial matemático para o seu jogo.</p>
-            <a href="#oferta" class="btn btn-primary pulse">Garantir Meu Acesso Agora</a>
         </div>
     </header>
+
+    <section class="video-section">
+        <div class="container">
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/6QLw2pn3Rbc?rel=0&modestbranding=1" 
+                    title="Apresentação do Sistema Milhar Milionária do Guinho" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen 
+                    loading="lazy">
+                </iframe>
+            </div>
+            <p class="video-caption">▶ Dê o play no vídeo acima para ver o sistema funcionando na prática.</p>
+            <div style="margin-top: 2rem;">
+                <a href="#oferta" class="btn btn-primary pulse">Garantir Meu Acesso Agora</a>
+            </div>
+        </div>
+    </section>
 
     <section class="test-drive">
         <div class="container">
